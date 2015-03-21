@@ -1,57 +1,58 @@
 # duo-jsx
 
-[react-tools](https://github.com/facebook/react) plugin for [duo](https://github.com/duojs/duo).
+A [react-tools](https://github.com/facebook/react) plugin for [duo](https://github.com/duojs/duo).
 
-## Examples
-
-```sh
-$ npm install --save-dev duo-js
-```
-
-###CLI
+## install
 
 ```sh
-$ duo -u duo-jsx in.js > out.js
+$ npm install --save-dev duo-jsx
 ```
 
-###Node
+## examples
+
+
+### cli
+```sh
+$ duo -u duo-jsx example.jsx > example.js
+```
+
+### node.js
 
 ```js
-var Duo = require('duo'),
-    jsx = require('duo-jsx');
+var Duo = require('duo');
+var jsx = require('duo-jsx');
+var duo = new Duo(__dirname);
 
-Duo(__dirname)
- .entry('main.js')
- .use(jsx())
- .run(function (err, src) {
-    // ...
- });
+duo.entry('example.jsx').use(jsx()).run(function (err, src) {
+    /* do something with the output */
+});
 ```
-##API
+api
+---
 
 ```js
 var jsx = require('duo-jsx');
 ```
 
-###jsx([options])
+### jsx([options])
 
 options: ```Object```
 
 Options are passed to react-tools
 
-####options.sourceMap
+#### options.sourceMap
 
 Type: ```Boolean``` Default: ```false```
 
 Append inline source map at the end of the transformed source. 
 
-####options.harmony
+#### options.harmony
 
 Type: ```Boolean``` Default: ```false```
 
 Enable ES6 features.
 
-####options.filename
+#### options.filename
 
 Type: ```string``` Default: ```source.js```
 

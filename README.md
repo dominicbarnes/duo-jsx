@@ -1,4 +1,6 @@
-# duo-jsx
+duo-jsx
+===
+[![Build Status](https://travis-ci.org/EvanMarkHopkins/duo-jsx.svg)](https://travis-ci.org/EvanMarkHopkins/duo-jsx)
 
 A [react-tools](https://github.com/facebook/react) plugin for [duo](https://github.com/duojs/duo).
 
@@ -8,8 +10,8 @@ A [react-tools](https://github.com/facebook/react) plugin for [duo](https://gith
 $ npm install --save-dev duo-jsx
 ```
 
-## examples
-
+examples
+---
 
 ### cli
 ```sh
@@ -44,7 +46,7 @@ Options are passed to react-tools
 
 Type: ```Boolean``` Default: ```false```
 
-Append inline source map at the end of the transformed source. 
+Append inline source map at the end of the transformed source.
 
 #### options.harmony
 

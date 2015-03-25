@@ -7,7 +7,7 @@
     "test": "test"
   },
   "scripts": {
-    "test": "node test/tape.js | faucet && rm test/components -r"
+    "test": "node --harmony-generators test/tape.js | faucet && rm -r test/components"
   },
   "repository": {
     "type": "git",

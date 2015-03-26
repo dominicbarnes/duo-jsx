@@ -2,6 +2,4 @@ language: node_js
 node_js:
   - "node"
   - "iojs"
-script:
-  - "node --harmony-generators test/tape.js"
-  - "node test/tape.js"
+script: 'if [ "${TRAVIS_NODE_VERSION}" = "node" ]; then node --harmony-generators test/tape.js; else node test/tape.js ; fi'

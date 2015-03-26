@@ -2,3 +2,6 @@ language: node_js
 node_js:
   - "node"
   - "iojs"
+script:
+  - "node --harmony-generators test/tape.js"
+  - "node test/tape.js"
